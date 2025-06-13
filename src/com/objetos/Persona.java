@@ -1,5 +1,7 @@
 package com.objetos;
 
+import java.util.Scanner;
+
 public class Persona {
     // debemos declarar las variables privadas de cada propiedad
     private String nombre;
@@ -45,5 +47,73 @@ public class Persona {
     public void setApellidos(String apellidos){
         this.apellidos = apellidos;
     }
+
+    public enum tipoGenero {
+        FEMENINO, MASCULINO, OTROS
+    }
+
+    private tipoGenero genero;
+
+    public tipoGenero getGenero(){
+        return this.genero;
+    }
+
+    public void setGenero(tipoGenero genero){
+        this.genero = genero;
+    }
+
+    public String getNombreCompleto(){
+        return this.nombre + " " + this.apellidos;
+    }
+
+    public String getNombreCompleto(int numero){
+        return this.nombre.toUpperCase() + " " + this.apellidos.toUpperCase();
+    }
+
+    public String getNombreCompleto(boolean orden){
+        return this.apellidos + ", " + this.nombre;
+    }
+
+    public String getNombreCompleto(String separador){
+        return this.nombre + separador + this.apellidos;
+    }
+
+    
+    public void getNombreCompleto(int num1, int num2){ //otro ejemplo
+        int suma = num1 + num2;
+    }
+
+    public int getNomberCompleto(String a, int b){  //otro ejemplo
+        return 19;
+    }
+
+
+
+
+
+    private int dni;
+    
+
+    public int getDni(){
+        return this.dni;
+    }
+
+    public void setDni (int dni){
+        this.dni=dni;
+    }
+
+
+    public char calcularLetra (){
+
+        String letrasDni = "TRWAGMYFPDXBNJZSQVHLCKET";
+        int resultado = (dni - (dni/23) * 23);
+        char letra = letrasDni.charAt(resultado);
+        return letra;
+        
+    }
+
+
+
+
     
 }
