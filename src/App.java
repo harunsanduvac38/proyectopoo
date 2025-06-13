@@ -1,7 +1,9 @@
 import com.objetos.Persona;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
+        
+        try{
         System.out.println("\n Probando la clase Persona");
 
         // Cuando hablamos de clases, necesitamos objetos para trabajar con dichas clases
@@ -19,9 +21,13 @@ public class App {
         System.out.println(person.getApellidos());
         
 
-        person.setEdad(23);
+        person.setEdad(-23);
         System.out.println(person.getEdad());
-
         System.out.println("Fin de Programa \n");
+        } catch (Exception e) {
+            // Nunca dejaremos un catch vacio
+            System.out.println("Error : " + e.getMessage());
+        }
+        
     }
 }
