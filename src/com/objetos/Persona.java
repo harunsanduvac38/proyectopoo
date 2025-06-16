@@ -3,6 +3,36 @@ package com.objetos;
 
 
 public class Persona {
+    // 1)Constructores de la clase (1 y 2 pueden intercambiar)
+    // 2)Campos de Propiedad
+    // 3)Getter y Setter
+    // 4)Metodos
+
+    // CONSTRUCTOR lleva el nombre de la clase
+    public Persona(){
+        // Cuando alguien ponga new Persona(), entra en este codigo:
+        System.out.println("Soy Constructor vacio de persona!");
+        // Todas las personas tendran un genero femenino:
+        this.setGenero(tipoGenero.FEMENINO);
+        
+    }
+
+    // Otro constructor que recibira los datos que yo quiera
+    public Persona(String nombre, String apellidos){
+        System.out.println("Constructor con nombre y apellidos Persona");
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+    }
+
+    // public Persona(String nombre, String apellidos, int edad, String dni, tipoGenero genero){
+    //     this.nombre=nombre;
+    //     this.apellidos = apellidos;
+    //     this.edad = edad;
+    //     this.dni = dni;
+    //     this.genero = genero;
+    // }
+
+
     // debemos declarar las variables privadas de cada propiedad
     private String nombre;
     private String apellidos;
