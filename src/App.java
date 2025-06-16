@@ -1,7 +1,7 @@
 import com.objetos.Persona;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         
         try{
         System.out.println("\n Probando la clase Persona");
@@ -39,24 +39,41 @@ public class App {
         System.out.println("\n\n");
 
 
-        person.setDni(9817020);
-        System.out.print("La letra de \"" + person.getDni());
-        System.out.println("\" es: " + person.calcularLetra());
+        // person.setDni(51981752);
+        // System.out.print("La letra de \"" + person.getDni());
+        // System.out.println("\" es: " + person.calcularLetra());
+        
+        // // Igual a este  (Creamos un método static , no necesitamos this, no necesitamos propiedad)
+
+        // char newLetraDni = Persona.getLetraDni(51981752);
+        // System.out.println("La letra por el método nuevo: " + newLetraDni);
+
+        // System.out.println("La letra de 12345678 : " + Persona.getLetraDni(12345678));
+        // System.out.println("56789234" + Persona.getLetraDni(56789232));
+
         
         
         
-        
-        } catch (Exception e) {
-            // Nunca dejaremos un catch vacio
-            System.out.println("Error : " + e.getMessage());
-        }
-        
-        
+
+
+        System.out.println("\n\n");
+
+
+        person.setDni("51981752A");
+        System.out.println("El DNI: \"" + person.getDni() + "\" está correcto");
 
 
 
 
 
         System.out.println("Fin de Programa \n");
+
+        } catch (Exception e) {
+            // Nunca dejaremos un catch vacio
+            System.out.println("Error : " + e.getMessage());
+        }
+        
     }
+
+    
 }

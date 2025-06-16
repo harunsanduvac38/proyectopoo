@@ -1,6 +1,6 @@
 package com.objetos;
 
-import java.util.Scanner;
+
 
 public class Persona {
     // debemos declarar las variables privadas de cada propiedad
@@ -91,25 +91,65 @@ public class Persona {
 
 
 
-    private int dni;
+    // private int dni;
     
 
-    public int getDni(){
+    // public int getDni(){
+    //     return this.dni;
+    // }
+
+    // public void setDni (int dni){
+    //     this.dni=dni;
+    // }
+
+
+    // public char calcularLetra (){
+
+    //     String letrasDni = "TRWAGMYFPDXBNJZSQVHLCKET";
+    //     int resultado = (this.dni - (this.dni/23) * 23);
+    //     char letra = letrasDni.charAt(resultado);
+    //     return letra;
+        
+
+    // }
+
+    // public static char getLetraDni(int dni){
+    //     String letrasDni = "TRWAGMYFPDXBNJZSQVHLCKET";
+    //     int resultado = (dni - (dni/23) * 23);
+    //     char letra = letrasDni.charAt(resultado);
+    //     return letra;
+
+
+    // }
+
+    private String dni;
+
+    public String getDni() {
         return this.dni;
     }
 
-    public void setDni (int dni){
-        this.dni=dni;
-    }
 
-
-    public char calcularLetra (){
-
+    
+    public void setDni(String dni)throws Exception {
+            
         String letrasDni = "TRWAGMYFPDXBNJZSQVHLCKET";
-        int resultado = (dni - (dni/23) * 23);
-        char letra = letrasDni.charAt(resultado);
-        return letra;
+        char letraDni = dni.charAt(dni.length() - 1);
+
         
+        String temp = dni.substring(0,dni.length() - 1);
+
+        int numeroDni = Integer.parseInt(temp);
+
+        int resultado = (numeroDni - (numeroDni/23) * 23);                         
+        char letra = letrasDni.charAt(resultado);
+
+        if(letraDni == letra){
+            this.dni = dni;
+        }else {
+            throw new Exception("La letra del DNI es incorrecta!");
+        }
+
+
     }
 
 
