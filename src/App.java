@@ -1,26 +1,40 @@
 import com.objetos.Persona;
 import com.objetos.Persona.tipoGenero;
 import com.objetos.Empleado;
+import com.objetos.Director;
 
 public class App {
     public static void main(String[] args) throws Exception {
         
         try{
         Empleado emp = new Empleado();
+        emp.setNombre("Santos");
+        emp.setApellidos("Cerdan");
+        // emp.setSalarioMinimo(80000); no podemos configurar porque en empleados hemos creado protected
+        
+        System.out.println("Salario mínimo empleado: " + emp.getSalarioMinimo());
+        System.out.println("\n");
+        
+        
+        
+        Director dir = new Director();
+        System.out.println("Salario mínimo director: " + dir.getSalarioMinimo());
 
-        emp.setDni("51981752G");
-        System.out.println("Empelado : " + emp.getDni());
-        emp.setSueldo(1800);
-        emp.setNombre("harun");
-        emp.setApellidos("Sanduvac");
-        System.out.println(emp.getNombreCompleto());
-        System.out.println("Sueldo : " + emp.getSueldo());
+        // emp.setDni("51981752G");
+        // System.out.println("Empelado : " + emp.getDni());
+        // emp.setSueldo(1800);
+        // emp.setNombre("harun");
+        // emp.setApellidos("Sanduvac");
+        // System.out.println(emp.getNombreCompleto());
+        // System.out.println("Sueldo : " + emp.getSueldo());
+
+        
 
         System.out.println("\n\n");
 
 
-        Empleado emp2 = new Empleado("Alex", "Sanchez");
-        System.out.println("nombre de empleado : " + emp2.getNombre() + "  " + emp2.getApellidos());
+        // Empleado emp2 = new Empleado("Alex", "Sanchez");
+        // System.out.println("nombre de empleado : " + emp2.getNombre() + "  " + emp2.getApellidos());
 
 
         // System.out.println("\n Probando la clase Persona");
