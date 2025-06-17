@@ -2,7 +2,19 @@ package com.objetos;
 
 public class Empleado extends Persona {
 
+    @Override
+    public String toString() {
+        return "Empleado: " + this.getNombreCompleto() + "\nSalario mínimo: " + this.getSalarioMinimo();
+    }
+
+
+    public final void metodoFinal(){
+        System.out.println("Soy un método final!");
+    }
+
+
     public int getDiasVacaciones(){
+        System.out.println("Vacaciones de empleado");
         return 22;
     }
     
