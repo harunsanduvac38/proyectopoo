@@ -20,6 +20,11 @@ public class App {
         Director dir = new Director();
         System.out.println("Salario mínimo director: " + dir.getSalarioMinimo());
 
+        System.out.println("\n\n");
+
+        System.out.println("Vacaciones empleado: " + emp.getDiasVacaciones());
+        System.out.println("Vacacinoes director: " + dir.getDiasVacaciones());
+
         // emp.setDni("51981752G");
         // System.out.println("Empelado : " + emp.getDni());
         // emp.setSueldo(1800);
@@ -30,7 +35,7 @@ public class App {
 
         
 
-        System.out.println("\n\n");
+        // System.out.println("\n\n");
 
 
         // Empleado emp2 = new Empleado("Alex", "Sanchez");
@@ -96,7 +101,7 @@ public class App {
         
 
 
-        System.out.println("\n\n");
+        // System.out.println("\n\n");
 
 
         // person.setDni("51981752G");

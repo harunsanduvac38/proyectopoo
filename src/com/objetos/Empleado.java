@@ -1,8 +1,13 @@
 package com.objetos;
 
 public class Empleado extends Persona {
+
+    public int getDiasVacaciones(){
+        return 22;
+    }
     
     private int salarioMinimo;
+    
 
     public int getSalarioMinimo(){
         return this.salarioMinimo;
