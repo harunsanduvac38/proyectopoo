@@ -2,40 +2,85 @@ import com.objetos.Persona;
 import com.objetos.Persona.tipoGenero;
 import com.objetos.Empleado;
 import com.objetos.Director;
+import java.util.ArrayList;
+import com.objetos.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
         
         try{
-            Empleado emp = new Empleado();
-            Director dir = new Director();
+            ArrayList<Persona> empleados = new ArrayList<Persona>();
+            Empleado emp1 = new Empleado();
+            emp1.setNombre("Empleado1");
+            emp1.setApellidos("Apellidos1");
+            empleados.add(emp1);
 
-
-            emp.setNombre("Harun");
-            emp.setApellidos("SANDUVAC");
-
-            System.out.println("\n\n");
-            System.out.println(emp.toString());
+            System.out.println("Emp1: " + emp1.getClass());
             System.out.println("\n");
 
+            System.out.println("Colección 0: " + empleados.get(0).getClass());
+            System.out.println("\n");
 
-            emp.setNombre("Santos");
-            emp.setApellidos("Cerdan");
-         // emp.setSalarioMinimo(80000); no podemos configurar porque en empleados hemos creado protected
+            Empleado emp2 = new Empleado();
+            emp2.setNombre("Empleado2");
+            emp2.setApellidos("Apellidos2");
+            empleados.add(emp2);
+
+            Director dir1 = new Director();
+            dir1.setNombre("Director1");
+            dir1.setApellidos("ApellidosDirector1");
+            empleados.add(dir1);
+
+            Persona becario = new Persona();
+            becario.setNombre("Becario");
+            becario.setApellidos("ApellidosBecario");
+            empleados.add(becario);
+
+            for(Persona emp: empleados){
+
+               
+                System.out.println(emp.getNombreCompleto());
+                System.out.println(emp.getClass());
+                if(emp instanceof Director){
+                    ((Director)emp).mandar();
+                }
+            }
+            System.out.println("\n");
+            // Empleado temp = (Empleado) empleados.get(0);
+            // Director temp2  = (Director) empleados.get(2);
+            // temp2.mandar();
+            // System.out.println(temp + "\n" + temp2);
+            
+
+        //     Empleado emp = new Empleado();
+        //     Director dir = new Director();
+
+
+        //     emp.setNombre("Harun");
+        //     emp.setApellidos("SANDUVAC");
+
+        //     System.out.println("\n\n");
+        //     System.out.println(emp.toString());
+        //     System.out.println("\n");
+
+
+        //     emp.setNombre("Santos");
+        //     emp.setApellidos("Cerdan");
+        //  // emp.setSalarioMinimo(80000); no podemos configurar porque en empleados hemos creado protected
         
-            System.out.println("Salario mínimo empleado: " + emp.getSalarioMinimo());
-            System.out.println("\n");
+        //     System.out.println("Salario mínimo empleado: " + emp.getSalarioMinimo());
+        //     System.out.println("\n");
         
         
         
        
-            System.out.println("Salario mínimo director: " + dir.getSalarioMinimo());
+        //     System.out.println("Salario mínimo director: " + dir.getSalarioMinimo());
 
-            System.out.println("\n\n");
+        //     System.out.println("\n\n");
 
-            System.out.println("Vacaciones empleado: " + emp.getDiasVacaciones());
-            System.out.println("Vacacinoes director: " + dir.getDiasVacaciones());
-            System.out.println("Vacaciones director con extra:  " + dir.getDiasVacaciones(10));
+        //     System.out.println("Vacaciones empleado: " + emp.getDiasVacaciones());
+        //     System.out.println("Vacacinoes director: " + dir.getDiasVacaciones());
+        //     System.out.println("Vacaciones director con extra:  " + dir.getDiasVacaciones(10));
 
             // emp.setDni("51981752G");
             // System.out.println("Empelado : " + emp.getDni());

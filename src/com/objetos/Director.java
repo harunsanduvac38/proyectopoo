@@ -2,6 +2,12 @@ package com.objetos;
 
 public class Director extends Empleado {
 
+
+    public void mandar(){
+
+        System.out.println("Obedeced todos, subditos!");
+    }
+
     // @Override
     // public void metodoFinal() {
     //     System.out.println("Soy un método final director!");

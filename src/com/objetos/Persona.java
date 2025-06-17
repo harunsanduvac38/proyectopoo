@@ -109,9 +109,9 @@ public class Persona {
     }
 
     
-    public void getNombreCompleto(int num1, int num2){ //otro ejemplo
-        int suma = num1 + num2;
-    }
+    // public void getNombreCompleto(int num1, int num2){ //otro ejemplo
+    //     int suma = num1 + num2;
+    // }
 
     public int getNomberCompleto(String a, int b){  //otro ejemplo
         return 19;
